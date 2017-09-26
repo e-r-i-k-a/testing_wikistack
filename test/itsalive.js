@@ -26,6 +26,7 @@ describe('spy', () => {
     let logNth = (val, idx) => console.log(`Logging elem #${idx}: ${val}`);
     logNth = chai.spy(logNth);
     arr.forEach(logNth);
+    console.log('hiiiiiii');
     expect(logNth).to.have.been.called.exactly(arr.length);
   });
 });
